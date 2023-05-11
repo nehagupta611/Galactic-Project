@@ -1,0 +1,74 @@
+<?php include 'db_connection.php'; ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planet Illustration</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      background-image: url("planetimg.webp");
+      background-size: cover; /* Adjust as needed */
+      background-repeat: no-repeat; /* Adjust as needed */
+    }
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body style="font-size: 20px;">
+    
+  <header>
+    <!-- Your website header content goes here -->
+    <nav>
+      <!-- Navigation menu goes here -->
+    </nav>
+  </header>
+
+  <main>
+    <!-- Main content of your website goes here -->
+    <section >
+        <center>
+            <h1>Welcome to Your Website</h1>
+            <div style="padding-bottom: 40px;"></div>
+
+            <a href="#">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="How_it_works.html">How it works</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="Features.html">Features</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="Contact_us.html">Contact us</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </center>
+    </section>
+    <div class="p" >
+        <p>Virgin Galactic is comprised of hundreds of dedicated and passionate professionals united in creating something new and lasting: the world’s first commercial spaceline. A spaceline for Earth.  We are here because we believe we are at the vanguard of a new space industry that is defining the future of exploration and that we will ultimately make space accessible to more people and for more purposes than ever before. We realize that our undertaking is both audacious and incredibly ambitious. We know that achieving our mission will require highly unusual levels of tenacity and dedication. If you share our passion for this mission, we welcome you to explore the positions we have available.</p>
+    </div>
+    <button class="button" onclick="window.location.href='login .html';" ondblclick="showAlert">Login</button>
+    <button class="button" onclick="window.location.href='signup.html';" ondblclick="showAlert">Signup</button>
+  </main>
+
+  <footer>
+    <!-- Footer content goes here -->
+    <div>
+      <!-- Social media links go here -->
+      <a href="https://www.facebook.com/">Facebook</a>
+      <a href="https://twitter.com/login">Twitter</a>
+      <a href="https://www.instagram.com/">Instagram</a>
+    </div>
+  </footer>
+
+  <!-- JavaScript files go here -->
+  <script src="script.js">
+     function showAlert() {
+            alert("Button clicked!");
+        }
+  </script>
+</body>
+</html>

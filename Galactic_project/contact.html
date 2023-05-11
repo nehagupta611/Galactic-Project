@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact Us</title>
+  <style>
+    /* CSS styles for the pop-up contact form */
+    .popup-container {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #f2f2f2;
+      padding: 20px;
+      width: 300px;
+      border-radius: 4px;
+    }
+
+    .popup-container label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .popup-container input[type="text"],
+    .popup-container input[type="email"],
+    .popup-container textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .popup-container input[type="submit"] {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Contact Us</h1>
+
+  <button onclick="showPopupForm()">Open Contact Form</button>
+
+  <div id="popup" class="popup-container">
+    <h2>Contact Us</h2>
+    <form id="contactForm" onsubmit="submitForm(event)">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" placeholder="Enter your message" rows="4" required></textarea>
+
+      <input type="submit" value="Submit" onclick="showAlert">
+    </form>
+  </div>
+
+  <script>
+    function showPopupForm() {
+      var popup = document.getElementById('popup');
+      popup.style.display = 'block';
+    }
+
+    function submitForm(event) {
+      event.preventDefault();
+      // Perform form submission logic here, e.g., sending form data to the server
+      var name = document.getElementById('name').value;
+      var email = document.getElementById('email').value;
+      var message = document.getElementById('message').value;
+
+      console.log('Name:', name);
+      console.log('Email:', email);
+      console.log('Message:', message);
+
+      // Reset the form fields
+      document.getElementById('contactForm').reset();
+
+      // Close the pop-up form
+      var popup = document.getElementById('popup');
+      popup.style.display = 'none';
+    }
+    function showAlert() {
+            alert("Button clicked!");
+        }
+  </script>
+</body>
+</html>

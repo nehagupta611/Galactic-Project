@@ -1,0 +1,78 @@
+<?php include 'db_connection.php'; ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planet Illustration</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      background-image: url("planetimg.webp");
+      background-size: cover; /* Adjust as needed */
+      background-repeat: no-repeat; /* Adjust as needed */
+    }
+  </style>
+</head>
+<body style="font-size: 25px;">
+    
+  <header>
+    <!-- Your website header content goes here -->
+    <nav>
+      <!-- Navigation menu goes here -->
+    </nav>
+  </header>
+
+  <main>
+    <!-- Main content of your website goes here -->
+    <section>
+        <center>
+            <h1>Welcome to Your Website</h1>
+            <div style="padding-bottom: 40px;"></div>
+            <a href="index.html">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="How_it_works.html">How it works</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="Features.html">Features</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="Contact_us.html">Contact us</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </center>
+      
+      <div class="p">
+        <p>
+            Galactic is an Ethereum scaling solution developed by Optimism. It aims to improve the scalability and efficiency of Ethereum by implementing optimistic rollups, a layer 2 scaling technique.
+
+Here's a high-level overview of how Galactic works:
+
+Optimistic Rollup Concept: Optimistic rollup is a layer 2 scaling technique that enables off-chain execution of transactions while maintaining the security guarantees of the Ethereum mainnet. It relies on a two-layer architecture where most transactions are processed off-chain, and only the necessary data is periodically submitted to the Ethereum mainnet.
+
+Execution and Verification: In Galactic, the majority of transactions are processed off-chain within an execution environment called the "optimistic virtual machine" (OVM). The OVM simulates the execution of transactions, including contract interactions, in a manner similar to the Ethereum mainnet.
+
+Optimistic State Updates: Once the transactions are executed off-chain, the OVM generates a "calldata commitment" containing the necessary information about the state changes resulting from the transaction execution. This commitment is periodically submitted to the Ethereum mainnet as a single compressed data point.
+
+Fraud Proofs and Disputes: The optimistic rollup design assumes that most transactions and state updates are valid. However, to maintain security, Galactic allows anyone to submit "fraud proofs" to challenge and dispute invalid state updates. Fraud proofs provide evidence that the OVM's execution or state updates are incorrect. If a fraud proof is successfully validated, the fraudulent data is rolled back, and the correct state is restored.
+
+Transaction Finality: The optimistic rollup mechanism introduces a challenge period during which fraud proofs can be submitted. Once this period expires and no valid fraud proof is presented, the state updates are considered finalized, and the off-chain transactions are considered confirmed.
+
+Benefits of Galactic: By processing most transactions off-chain, Galactic improves the scalability of Ethereum. It enables faster and cheaper transaction processing while still benefiting from the security and decentralization of the Ethereum mainnet. Galactic aims to support a wide range of use cases, including decentralized finance (DeFi), gaming, and non-fungible tokens (NFTs).
+
+It's important to note that while Galactic is an ongoing project, the information provided here reflects the general concepts and principles of optimistic rollups. The specific technical details and implementation may evolve over time.
+
+If you're interested in learning more about Galactic and optimistic rollups, I recommend referring to the official documentation and resources provided by Optimism.
+        </p>
+      </div>
+      
+    </section>
+  </main>
+
+  <footer>
+    <!-- Footer content goes here -->
+    <div>
+      <!-- Social media links go here -->
+      <a href="https://www.facebook.com/">Facebook</a>
+      <a href="https://twitter.com/login">Twitter</a>
+      <a href="https://www.instagram.com/">Instagram</a>
+    </div>
+  </footer>
+
+  <!-- JavaScript files go here -->
+  <script src="script.js"></script>
+</body>
+</html>
